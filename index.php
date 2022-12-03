@@ -2,4 +2,13 @@
 
 require __DIR__ . '/kirby/bootstrap.php';
 
-echo (new Kirby)->render();
+$kirby = new Kirby([
+	'roots' => [
+		'accounts' => '/tmp/accounts',
+		'cache' => '/tmp/cache',
+		'sessions' => '/tmp/sessions',
+		'media' => '/tmp/media'
+	]
+]);
+
+echo $kirby->render();

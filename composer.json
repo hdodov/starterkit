@@ -23,11 +23,13 @@
   },
   "require": {
     "php": ">=8.0.0 <8.2.0",
-    "getkirby/cms": "^3.8"
+    "getkirby/cms": "^3.8",
+    "bref/bref": "^1.7"
   },
   "config": {
     "allow-plugins": {
-      "getkirby/composer-installer": true
+      "getkirby/composer-installer": true,
+      "symfony/runtime": true
     },
     "optimize-autoloader": true
   },
