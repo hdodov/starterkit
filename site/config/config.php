@@ -15,10 +15,16 @@ $options = [
     'debug' => true,
     'hooks' => [
         'route:after' => function ($route, $path, $method, $result, $final) {
-            $path = kirby()->root() . '/' . $path;
+            $staticRoot = kirby()->root('index');
 
-            if (F::exists($path)) {
-                return Response::file($path);
+            if ($GLOBALS['PRODUCTION'] && strpos($path, 'media/') === 0) {
+                $staticRoot = '/tmp';
+            }
+
+            $filePath = $staticRoot . '/' . $path;
+
+            if (F::exists($filePath)) {
+                return Response::file($filePath);
             }
         }
     ]
