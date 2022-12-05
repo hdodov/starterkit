@@ -8,6 +8,14 @@ $options = [
     'panel' => [
         'install' => true
     ],
+    'routes' => [
+        [
+            'pattern' => 'info',
+            'action' => function () {
+                return phpinfo();
+            }
+        ]
+    ],
     'hooks' => [
         'route:after' => function ($route, $path, $method, $result, $final) {
             $filePath = kirby()->root('index') . '/' . $path;
