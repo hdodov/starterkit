@@ -3,7 +3,7 @@
 $GLOBALS['PRODUCTION'] = getenv('KIRBY_ENV') === 'production';
 
 // Avoid incorrect software requirement error.
-$_SERVER['SERVER_SOFTWARE'] = 'nginx';
+$_SERVER['SERVER_SOFTWARE'] = 'Apache';
 
 if (!$GLOBALS['PRODUCTION']) {
 	require __DIR__ . '/kirby/bootstrap.php';
