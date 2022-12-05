@@ -2,21 +2,12 @@
 
 $GLOBALS['PRODUCTION'] = getenv('KIRBY_ENV') === 'production';
 
-require __DIR__ . '/kirby/bootstrap.php';
-
-$options = [];
-
 if ($GLOBALS['PRODUCTION']) {
-	$options = [
-		'roots' => [
-			'accounts' => '/tmp/accounts',
-			'cache' => '/tmp/cache',
-			'sessions' => '/tmp/sessions',
-			'media' => '/tmp/media'
-		]
-	];
+	require getenv('KIRBY_ROOT') . '/kirby/bootstrap.php';
+} else {
+	require __DIR__ . '/kirby/bootstrap.php';
 }
 
-$kirby = new Kirby($options);
+$kirby = new Kirby();
 
 echo $kirby->render();

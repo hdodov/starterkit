@@ -1,3 +1,0 @@
-# Simulate lambda environment, where each and every request is proxied to PHP.
-RewriteEngine on
-RewriteRule ^(.*) index.php [L]

@@ -7,10 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'hollodotme\\FastCGI\\' => array($vendorDir . '/hollodotme/fast-cgi-client/src'),
-    'Whoops\\' => array($vendorDir . '/filp/whoops/src/Whoops'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Polyfill\\Intl\\Normalizer\\' => array($vendorDir . '/symfony/polyfill-intl-normalizer'),
-    'Symfony\\Polyfill\\Intl\\Idn\\' => array($vendorDir . '/symfony/polyfill-intl-idn'),
     'Symfony\\Polyfill\\Intl\\Grapheme\\' => array($vendorDir . '/symfony/polyfill-intl-grapheme'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'Symfony\\Contracts\\Service\\' => array($vendorDir . '/symfony/service-contracts'),
@@ -27,14 +25,9 @@ return array(
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-factory/src', $vendorDir . '/psr/http-message/src'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Psr\\Cache\\' => array($vendorDir . '/psr/cache/src'),
-    'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
     'Nyholm\\Psr7\\' => array($vendorDir . '/nyholm/psr7/src'),
-    'Laminas\\Escaper\\' => array($vendorDir . '/laminas/laminas-escaper/src'),
-    'Kirby\\' => array($baseDir . '/kirby/src', $vendorDir . '/getkirby/composer-installer/src'),
     'Http\\Message\\' => array($vendorDir . '/php-http/message-factory/src'),
-    'Composer\\Semver\\' => array($vendorDir . '/composer/semver/src'),
     'Bref\\' => array($vendorDir . '/bref/bref/src'),
     'AsyncAws\\Lambda\\' => array($vendorDir . '/async-aws/lambda/src'),
     'AsyncAws\\Core\\' => array($vendorDir . '/async-aws/core/src'),
-    '' => array($vendorDir . '/league/color-extractor/src'),
 );
