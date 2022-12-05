@@ -32,8 +32,4 @@ $options = [
     ]
 ];
 
-// if ($GLOBALS['PRODUCTION']) {
-//     $options['url'] = getenv('SERVER_URL');
-// }
-
 return $options;
