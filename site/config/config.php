@@ -13,6 +13,9 @@ use Kirby\Filesystem\F;
 
 $options = [
     'debug' => true,
+    'panel' => [
+        'install' => true
+    ],
     'hooks' => [
         'route:after' => function ($route, $path, $method, $result, $final) {
             $filePath = kirby()->root('index') . '/' . $path;
