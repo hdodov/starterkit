@@ -12,7 +12,8 @@ $options = [
         [
             'pattern' => 'info',
             'action' => function () {
-                return phpinfo();
+                phpinfo();
+                exit();
             }
         ]
     ],
