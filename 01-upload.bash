@@ -1,4 +1,5 @@
 #!/bin/bash
+set -ex
 tag="954231571588.dkr.ecr.us-east-1.amazonaws.com/projects:latest"
 docker build -t projects .
 docker tag projects:latest "$tag"
