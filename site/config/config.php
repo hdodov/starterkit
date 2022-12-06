@@ -47,19 +47,7 @@ $options = [
                 return;
             }
 
-            $headers = [];
-
-            if (preg_match('~^media/(.*)~', $path)) {
-                $headers['Cache-Control'] = 'public, max-age=31536000';
-            }
-
-            if (preg_match('~^assets/(.*)~', $path)) {
-                $headers['Cache-Control'] = 'public, max-age=1800';
-            }
-
-            return Response::file($filePath, [
-                'headers' => $headers
-            ]);
+            return Response::file($filePath);
         }
     ]
 ];
