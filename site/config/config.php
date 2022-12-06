@@ -34,9 +34,20 @@ $options = [
         'route:after' => function ($route, $path, $method, $result, $final) {
             $filePath = kirby()->root('index') . '/' . $path;
 
-            if (F::exists($filePath)) {
-                return Response::file($filePath);
+            if (!F::exists($filePath)) {
+                return;
             }
+
+            if (
+                preg_match('~(^|/)\.(?!well-known\/)~', $path) ||
+                preg_match('~^content/(.*)~', $path) ||
+                preg_match('~^site/(.*)~', $path) ||
+                preg_match('~^kirby/(.*)~', $path)
+            ) {
+                return;
+            }
+
+            return Response::file($filePath);
         }
     ]
 ];
