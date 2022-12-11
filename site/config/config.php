@@ -5,10 +5,7 @@ use Kirby\Filesystem\F;
 
 $options = [
     'debug' => true,
-    'url' => [
-        'https://5kz7rdkqszz7wiabx5npv2eeny0maefm.lambda-url.us-east-1.on.aws',
-        'http://starterkit.work'
-    ],
+    'url' => $_ENV['KIRBY_SERVER_URL'] ?? 'http://starterkit.work',
     'panel' => [
         'install' => true
     ],
