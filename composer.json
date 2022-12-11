@@ -23,8 +23,7 @@
   },
   "require": {
     "php": ">=8.0.0 <8.2.0",
-    "getkirby/cms": "^3.8",
-    "oblik/kirby-git": "^1.4"
+    "getkirby/cms": "^3.8"
   },
   "config": {
     "allow-plugins": {
