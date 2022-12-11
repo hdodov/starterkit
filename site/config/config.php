@@ -4,7 +4,7 @@ use Kirby\Cms\Response;
 use Kirby\Filesystem\F;
 
 $options = [
-    'debug' => true,
+    'debug' => ($_ENV['KIRBY_ENV'] ?? null) !== 'production',
     'url' => $_ENV['KIRBY_SERVER_URL'] ?? 'http://starterkit.work',
     'panel' => [
         'install' => true
